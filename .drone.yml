@@ -34,7 +34,7 @@ steps:
   commands:
     - echo $discord_token > discord_config.txt
     - docker run -d git.bhaanukaul.com/svc-container-manager/khg-bot:latest --name khg-bot
-    - container_id=$(docker ps -a | grep khg-bot | awk '{ print $1 }') docker cp discord_config.txt $container_id:/app/discord_config.txt
+    - container_id=$(docker ps -a | grep khg-bot | awk '{ print $1 }'); docker cp discord_config.txt $container_id:/app/discord_config.txt
 
 
 volumes:
