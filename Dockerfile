@@ -5,4 +5,5 @@ WORKDIR /app
 ADD bot/ .
 ADD requirements.txt .
 RUN pip install -r requirements.txt
-ENTRYPOINT [ "python", "bot.py"]
+RUN sleep 15
+ENTRYPOINT [ "python", "bot/bot.py"]
